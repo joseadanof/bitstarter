@@ -12,7 +12,6 @@ app.get('/', function(request, response) {
 	var rawdata = fs.readFileSync("index.html","utf-8");
 	var bufferhandle = new Buffer(rawdata); 
 	response.send(bufferhandle.toString());
-	console.log('>'= bufferhandle.toString());
 });
 
 var port = process.env.PORT || 5000;
